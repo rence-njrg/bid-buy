@@ -1,0 +1,230 @@
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav{
+    .container-fluid{
+        .row{
+            position: relative;
+            .brand_container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: rgba($color: #eee, $alpha: 0.8);
+                padding: 10px 20px 10px 10px;
+                border-radius: 10px;
+                #logo{
+                    cursor: pointer;
+                    img{
+                        width: 70px
+                    };
+                }
+
+                i{
+                    font-size: 1.8em;
+                    cursor: pointer;
+                    color: #f97316;
+                }
+            }
+
+            .nav_container{
+                position: absolute;
+                //display: flex;
+                display: none;
+                justify-content: space-between;
+                width: 210px;
+                top: 78px;
+                right: 10px;
+                padding:  5px 10px ;
+                border-radius: 10px;
+                background-color: rgba($color: #000, $alpha: 0.2);
+                .nav_links{
+                    margin: 25px 2px 20px 2px;
+                    ul{
+                        .nav_link{
+                            list-style: none;
+                            margin: 10px 0;
+                            a{
+                                text-decoration: none;
+                                color: #000;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                .close_btn{
+                    margin: 10px 5px;
+                    i{
+                        font-size: 1.6em;
+                        color: #f97316;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.hero_section{
+    .container{
+        .hero_form{
+           
+            form{
+                .search_box{
+                    margin: 30px 2px;
+                    
+                    .form-group{
+                        .form-control{
+                            border-radius: 15px;
+                            border: .5px solid #777;
+                            background-color: rgba($color: #999, $alpha: 0.2);
+                        }
+                    }
+
+                    .form_btn{
+                        width: 90px;
+                        margin: 10px auto;
+                        button{
+                            border-radius: 7px;
+                            padding: 5px 15px;
+                            border: none;
+                            background-color: #f97316;
+                            color: #f3f4f6;
+                            cursor: pointer;
+
+                            &:focus{
+                                color: #000;
+                                background-color: #f3f4f6;
+                                border: 1px solid #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .category_link_section{
+            margin: 20px 5px 5px 5px;
+            .category_links{
+                button{
+                    border-radius: 10px;
+                    border: none;
+                    padding: 5px 10px;
+                    background-color: #f97316;
+                    color: #f3f4f6;
+                    margin: 0 3px;
+                    cursor: pointer;
+        
+                    &:focus{
+                        color: #000;
+                        background-color: #f3f4f6;
+                        border: 1px solid #000;
+                    }
+                }
+            }
+        }
+
+        .most_popular_container{
+            .popular_foods{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .food_card{
+                    flex: 0 1 calc(50% - 10px);
+                    box-sizing: border-box;
+                    padding-bottom: 10px;
+                    margin: 20px 0;
+                    border: none;
+                    position: relative;
+                    background-color: rgba($color: #f3f4f0, $alpha: 1.0);
+                    img{
+                        border-radius: 10px 10px 0 0;
+                        
+                    }
+
+                    .card-body{
+                        position: relative;
+                        .card-title{
+                            font-weight: 500;
+
+                            margin: 5px 0;
+                        }
+                        .item_description{
+                            font-size: 0.9em;
+                            margin: 15px 0;
+
+                        }
+
+                        .item_price{
+                            margin: 10px 0 5px 0;
+                            font-size: 1.2em;
+                            font-weight: 500;
+                            
+                        }
+                        /*.card_btn{
+                            a{
+                                text-decoration: none;
+                                border-radius: 7px;
+                                background-color: #f97316;
+                                color: #f3f4f6;
+                                padding: 5px  15px;
+                                cursor: pointer;
+    
+                                &:focus{
+                                    color: #000;
+                                    background-color: #f3f4f6;
+                                    border: 1px solid #000;
+                                }
+                            }
+                        }*/
+                    }
+
+                    i{
+                        position: absolute;
+                        top: 15px;
+                        right: 7px;
+                        color: #f97316;
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #f3f4f6;
+    
+    .container{
+        .footer_links_container{
+            .footer_logo{
+                width: 200px;
+                margin: 5px auto;
+                img{
+                    width: 200px;
+                }
+            }
+            
+            h5{
+                font-weight: 500;
+                font-size: 2em;
+            }
+
+            ul{
+                .list-group-item{
+                    list-style: none;
+                    margin: 30px 0;
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

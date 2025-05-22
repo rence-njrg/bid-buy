@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo-mini.png">
+
+    <!--   Font Awesome CDN   -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+   
+
+    <!--- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+     <!---    Tailwind CDN   -->
+
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+     <style>
+      /* It makes sure that only the categories tabs scroll and not the whole page */
+      html, body{
+        overflow-x: hidden;
+      }
+
+
+      /* Hides the catagories tabs scroll bar in Chrome, Safari and Opera */
+      .scroll-container::-webkit-scrollbar{
+        display: none;
+      }
+
+      /* Hides the scroll bar for IE, Edge and Firefox */
+
+      .scroll-container{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+     </style>
+ 
+</head>
+<body class="bg-transparent font-sans antialiased">
+    <nav class="bg-black p-5 shadow-lg rounded-b-xl">
+        <div class="container mx-auto w-full flex justify-between items-center">
+            <div class="text-white text-2xl font-normal">
+                <a href="#" class="hover:text-blue-200 transition-colors duration-300"></a>Bid & Buy
+            </div>
+
+            <div class="hidden md:flex">
+                <form id="item-search-form"class="w-100">
+                <div class="relative">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        id="mobile-search-input"
+                        class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-600 bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                    <button
+                        type="submit"
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-300 focus:outline-none"
+                        aria-label="Perform search"
+                    >
+                        <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="#f97316"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            </div>
+
+            <div>
+                <button id="mobile-menu-button"
+                    class="text-white focus:outline-none focus:ring-2 focus:ring-blue-300 p-2 rounded-md transition-all duration-300 hover:bg-blue-500"
+                    aria-label="Toggle navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user text-white">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+
+                <button class="relative text-white focus:outline-none focus:ring-2 focus:ring-blue-300 p-2 rounded-md transition-all duration-300 hover:bg-blue-500">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart text-white">
+                        <circle cx="8" cy="21" r="1"></circle>
+                        <circle cx="19" cy="21" r="1"></circle>
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                    </svg>
+                    <span class="absolute -top-2 -right-1 bg-orange-500 text-black text-s font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                        3
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-orange-500 py-4 px-2 mt-4 rounded-lg shadow-inner mobile-menu-transition">
+            <div class="flex flex-col space-y-3 mb-6">
+                <a href="#" class="mobile-menu-link block text-white hover:text-blue-300 transition-colors duration-300 text-base font-medium py-2 px-3 rounded-md bg-gray-700 hover:bg-gray-600">Profile</a>
+                <a href="#" class="mobile-menu-link block text-white hover:text-blue-300 transition-colors duration-300 text-base font-medium py-2 px-3 rounded-md bg-gray-700 hover:bg-gray-600">Cart</a>
+                <a href="#" class="mobile-menu-link block text-white hover:text-blue-300 transition-colors duration-300 text-base font-medium py-2 px-3 rounded-md bg-gray-700 hover:bg-gray-600">Orders</a>
+                <a href="#" class="mobile-menu-link block text-white hover:text-blue-300 transition-colors duration-300 text-base font-medium py-2 px-3 rounded-md bg-gray-700 hover:bg-gray-600">Wishlist</a>
+                <a href="#" class="mobile-menu-link block text-white hover:text-blue-300 transition-colors duration-300 text-base font-medium py-2 px-3 rounded-md bg-gray-700 hover:bg-gray-600">Logout</a>
+            </div>
+        </div>
+
+        <div class="w-full max-w-8xl mx-auto shadow-xl rounded-xl pt-6 p-1">
+      <div class="w-full mx-auto max-w-4xl align-center">
+        <form id="item-search-form" class="mb-6 max-w-xl mx-auto md:hidden">
+                <div class="relative">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        id="mobile-search-input"
+                        class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-600 bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                    <button
+                        type="submit"
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-300 focus:outline-none"
+                        aria-label="Perform search"
+                    >
+                        <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="#f97316"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            <div class="scroll-container">
+                <div class="overflow-x-auto space-x-4 flex md:justify-center md:flex-wrap md:space-x-2">
+                    <a href="#electronics" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Electronics</a>
+
+                    <a href="#clothing" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Clothing</a>
+
+                    <a href="#books" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Books</a>
+
+                    <a href="#homegoods" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Home Goods</a>
+
+                    <a href="#sports" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Sports</a>
+
+                    <a href="#sports" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Sports</a>
+
+                    <a href="#sports" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Sports</a>
+
+                    <a href="#sports" class=" flex-shrink-0 text-center text-m text-white hover:text-gray-300 transition-colors duration-300 py-2 px-2 whitespace-nowrap">Sports</a>
+                </div>
+            </div>
+      </div>
+    </nav>
+
+    <main class="p-4 md:p-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800">Welcome to Our Website!</h1>
+        <p class="mt-4 text-center text-gray-600">
+            Resize your browser window to see the responsive navigation in action.
+        </p>
+    </main>
+
+    <script>
+        // Get references to the DOM elements
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileSearchForm = document.getElementById('mobile-search-form');
+        const mobileSearchInput = document.getElementById('mobile-search-input');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link'); // Select all links in mobile menu
+
+        // Function to toggle the mobile menu visibility
+        function toggleMobileMenu() {
+            // Toggle the 'open' class for the transition
+            mobileMenu.classList.toggle('open');
+            // Toggle 'hidden' for semantic visibility
+            // (You might prefer to toggle 'block' or 'flex' directly without max-height transition if simpler)
+            mobileMenu.classList.toggle('hidden');
+
+            // Toggle hamburger and close icons
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        // Add event listener to the mobile menu button
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Handle search form submission
+        mobileSearchForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const query = mobileSearchInput.value;
+            console.log('Searching for (mobile):', query);
+            // In a real application, you would navigate or filter content here
+            // Example: window.location.href = `/search?q=${query}`;
+            mobileSearchInput.value = ''; // Clear input after search
+            toggleMobileMenu(); // Close menu after search
+        });
+
+        // Close mobile menu when a link inside it is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // Optional: Close mobile menu if window is resized to desktop size
+        // This handles cases where menu is open, then resized to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    mobileMenu.classList.add('hidden'); // Ensure it's hidden
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

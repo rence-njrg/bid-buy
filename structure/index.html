@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Serve</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo-mini.png">
+
+     <!--   Font Awesome CDN   -->
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+
+     <!--- Google Fonts -->
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <!---    Bootstrap CDN   -->
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
+
+     <!---   CSS -->
+     <link rel="stylesheet" href="../css/index/index.css">
+
+</head>
+<body>
+    <nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="brand_container">
+                    <span id="logo"><img src="../assets/logo-mini.svg" alt="Swift Serve"></span>
+
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="nav_container">
+                    <div class="nav_links">
+                        <ul>
+                            <li class="nav_link">
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li class="nav_link">
+                                <a href="#">My orders</a>
+                            </li>
+
+                            <li class="nav_link">
+                                <a href="#">vendors</a>
+                            </li>
+
+                            <li class="nav_link">
+                                <a href="#">About Us</a>
+                            </li>
+
+                            <li class="nav_link">
+                                <a href="#">Terms of Service</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="close_btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero_section">
+        <div class="container">
+            <!--<div class="hero_form">
+                <form action="#">
+                   <div class="search_box">
+                        <div class="form-group">
+                            <input type="search" class="form-control" id="foodInput" aria-describedby="inputHelp" placeholder="Search for Food or Drink">
+                            <div id="inputHelp" class="form-text">Please Enter what you want to have</div>
+                        </div>
+                        <div class="form_btn">
+                            <button type="submit" class="search_btn">Search</button>
+                        </div>
+                   </div>
+                </form>
+            </div>-->
+
+            <div class="category_link_section">
+                <div class="category_links">
+                    <button class="all_btn">All</button>
+                    <button class="burgers_btn">Burgers</button>
+                    <button class="chicken_btn">Chicken</button>
+                    <button class="pizza_btn">Pizza</button>
+                    <button class="drinks_btn">Drinks</button>
+                </div>
+            </div>
+            
+            <!---  MOST POPULAR FOODS CARDS  -->
+
+            <div class="most_popular_container">
+                <div class="popular_foods">
+                    <div class="food_card card">
+                        <img src="../assets/burger2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/fries2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet consectetur.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/pizza2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet consectetur.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/frieschicken.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                            <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/burger2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/fries2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet consectetur.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/pizza2.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet consectetur.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                           <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+
+                    <div class="food_card card">
+                        <img src="../assets/frieschicken.jpg" alt="Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger Big with Cheese</h5>
+                            <p class="card-text item_description">Lorem ipsum dolor sit amet.</p>
+                            <p class="card-text item_price">Kshs <span id="price">500.00</span></p>
+                            <!--   This is another version of a button that adds the item to the cart
+                            <div class="card_btn">
+                             <a href="#" class="addToCartBtn">Add to Cart</a>
+                           </div>-->
+                        </div>
+                        <!--This is the current version of the button that adds items to the cart-->
+                        <i class="fa-solid fa-circle-plus addToCartBtn"></i>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer_links_container">
+                <div class="footer_logo">
+                    <img src="../assets/logo-mini.svg" alt="Swift Serve">
+                </div>
+
+                <div class="footer_links">
+                    <h5>Links</h5>
+                    <ul>
+                        <li class="list-group-item">
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">My orders</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Vendors</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">About Us</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="food_categories">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li class="list-group-item">
+                            <a href="#">Pizza</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Burger</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Chicken</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Soda</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#">Wine</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service_links">
+                    <h5>Terms</h5>
+                    <ul>
+                        <li class="list-group-item">
+                            <a href="#">Terms of Service</a>
+                        </li>
+    
+                        <li class="list-group-item">
+                            <a href="#">Cookie Policy</a>
+                        </li>
+    
+                        <li class="list-group-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+    
+                        <li class="list-group-item">
+                            <a href="#">Compliance</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+           
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/8f35fe7b72.js" crossorigin="anonymous"></script>
+</body>
+</html>
